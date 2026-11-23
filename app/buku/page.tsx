@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import { tambahBuku, hapusBuku } from "./actions";
 
+export const dynamic = "force-dynamic";
+
 export default async function BukuPage() {
   // ambil semua data buku
   const data = await prisma.buku.findMany();
